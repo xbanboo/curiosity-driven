@@ -260,7 +260,7 @@ export default function App({ onBack }){
   const[customData,setCustomData]=useState(null);
   const[customName,setCustomName]=useState("");
   const[activeView,setActiveView]=useState("both");
-  const[showInfo,setShowInfo]=useState(true);
+  const[showInfo,setShowInfo]=useState(false);
   const[pdbIdInput,setPdbIdInput]=useState("");
   const[loadingPdb,setLoadingPdb]=useState(false);
   const[loadError,setLoadError]=useState("");
@@ -368,7 +368,7 @@ export default function App({ onBack }){
       </div>
 
       {/* 3D Views — flex:1 absorbs all remaining space */}
-      <div style={{position:"relative",zIndex:5,flex:1,minHeight:0,display:"flex",alignItems:"stretch",justifyContent:"center",padding:activeView==="both"?"0 16px":0,gap:activeView==="both"?"2px":0}}>
+      <div style={{position:"relative",zIndex:5,flex:1,minHeight:0,display:"flex",alignItems:"stretch",justifyContent:"center",padding:activeView==="both"?"0 16px":0,gap:activeView==="both"?"1.5px":0}}>
 
         {/* Floating info panel — bottom left */}
         <div style={{position:"absolute",bottom:12,left:activeView==="both"?28:18,zIndex:20,maxWidth:showInfo?"380px":"auto",transition:"all 0.3s ease"}}>
