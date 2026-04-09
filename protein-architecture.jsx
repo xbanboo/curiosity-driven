@@ -301,7 +301,7 @@ export default function App({ onBack }){
       <div style={{position:"fixed",inset:0,backgroundImage:"linear-gradient(rgba(45,212,191,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(45,212,191,0.03) 1px,transparent 1px)",backgroundSize:"40px 40px",pointerEvents:"none",zIndex:0}}/>
 
       {/* Header */}
-      <div style={{position:"relative",zIndex:10,padding:"16px 16px 0",borderBottom:"1px solid rgba(45,212,191,0.15)"}}>
+      <div style={{position:"relative",zIndex:10,padding:"16px 16px 0",borderBottom:"none"}}>
         <div style={{display:"flex",alignItems:"baseline",gap:"10px",marginBottom:"4px"}}>
           {onBack && <button onClick={onBack} style={{padding:"4px 12px",background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:"4px",color:"#525252",cursor:"pointer",fontSize:"13px",fontFamily:"'Courier New',monospace",transition:"all 0.2s"}}>{"← 首页"}</button>}
           <h1 style={{fontSize:"14px",fontWeight:400,letterSpacing:"4px",textTransform:"uppercase",color:"#2dd4bf",margin:0}}>PROTEIN → ARCHITECTURE</h1>
@@ -420,7 +420,7 @@ export default function App({ onBack }){
       </div>
 
       {/* Bottom bar — fixed at page bottom */}
-      <div style={{flexShrink:0,position:"relative",zIndex:5,padding:"8px 16px",borderTop:"1px solid rgba(45,212,191,0.08)",display:"flex",alignItems:"center",gap:"20px",flexWrap:"wrap"}}>
+      <div style={{flexShrink:0,position:"relative",zIndex:5,padding:"8px 16px",borderTop:"none",display:"flex",alignItems:"center",gap:"20px",flexWrap:"wrap"}}>
         {/* Legend */}
         <div style={{display:"flex",gap:"14px",flexWrap:"wrap",flex:1}}>
           {[["#2dd4bf","#d4c5a0","α螺旋","塔楼+柱网"],["#f59e0b","#7a8a6b","β折叠","平层建筑"],["#6b7280","#8a8a8a","卷曲","走廊天桥"]].map(([c1,c2,f,t],i)=>(
