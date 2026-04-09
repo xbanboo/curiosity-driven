@@ -336,6 +336,11 @@ export default function App({ onBack }){
           )}
           <span style={{flex:1}}/>
           <div style={{flex:"0 0 auto",display:"flex",gap:"4px",alignItems:"stretch"}}>
+            <TabBtn active={activeView==="protein"} onClick={()=>setActiveView("protein")} color="#2dd4bf">🧬 蛋白质</TabBtn>
+            <TabBtn active={activeView==="arch"} onClick={()=>setActiveView("arch")} color="#e8c170">🏛 建筑</TabBtn>
+            <TabBtn active={activeView==="both"} onClick={()=>setActiveView("both")} color="#94a3b8">⟷ 对比</TabBtn>
+          </div>
+          <div style={{flex:"0 0 auto",display:"flex",gap:"4px",alignItems:"stretch"}}>
             <input
               value={pdbIdInput}
               onChange={(e)=>setPdbIdInput(e.target.value.toUpperCase())}
@@ -360,13 +365,6 @@ export default function App({ onBack }){
           </div>
         </div>
         {loadError&&<div style={{fontSize:"12px",color:"#ef4444",paddingBottom:"8px"}}>{loadError}</div>}
-      </div>
-
-      {/* View toggle */}
-      <div style={{padding:"10px 16px",display:"flex",gap:"8px",position:"relative",zIndex:5}}>
-        <TabBtn active={activeView==="protein"} onClick={()=>setActiveView("protein")} color="#2dd4bf">🧬 蛋白质</TabBtn>
-        <TabBtn active={activeView==="arch"} onClick={()=>setActiveView("arch")} color="#e8c170">🏛 建筑</TabBtn>
-        <TabBtn active={activeView==="both"} onClick={()=>setActiveView("both")} color="#94a3b8">⟷ 对比</TabBtn>
       </div>
 
       {/* 3D Views — flex:1 absorbs all remaining space */}
