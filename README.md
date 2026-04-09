@@ -1,4 +1,4 @@
-# Crazy Ideas | 好奇心驱动我们去发现更多
+# Curiosity drives us to discover more
 
 > What if we looked at the world from a completely different angle?
 
